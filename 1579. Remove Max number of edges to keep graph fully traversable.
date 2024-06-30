@@ -1,0 +1,19 @@
+class Solution {
+    public int maxNumEdgesToRemove(int n, int[][] edges) {
+        Arrays.sort(edges ,(a,b)->(b[0]-a[0]));
+        int[] alice=new int[n+1];
+        int[] rankAlice=new int[n+1];
+        int[] bob = new int[n+1];
+        int[] rankBob= new int[n+1];
+        for(int i=1;i<=n;i++){
+            alice[i]=i;
+            bob[i]=i;
+…    public int find(int x,int[] arr){
+        if(arr[x]==x){
+            return x;
+        }
+        int temp=find(arr[x],arr);
+        arr[x]=temp;
+        return temp;
+    }
+}
